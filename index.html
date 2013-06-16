@@ -1,6 +1,6 @@
 <!doctype html>
 
-<html lang="en">
+<html lang="en" ng-app="vawApp">
 
 <head>
 
@@ -18,12 +18,17 @@
 		
 
 		<script type="text/javascript" src="js/jquery.min.js"></script>
-                <script type="text/javascript" src="js/bargraph.js"></script>
+		<script type="text/javascript" src="js/lib/angular/angular.min.js"></script>
+        <script type="text/javascript" src="js/app.js"></script>
+        <script type="text/javascript" src="js/controllers/MainController.js"></script>
+        
+        <script type="text/javascript" src="js/bargraph.js"></script>
 		<script src="js/highcharts.js"></script>
 
 </head>
 
-<body>
+<body ng-controller="MainController">
+    
 
 	<header>
 
@@ -107,7 +112,8 @@
 
 <!----------------------------------------Form Section--------------------------->
 <aside id="formSection1">
-   
+       {{test}}
+    <ng-view></ng-view>
     <form>
        <label style="font-weight: bold; border-bottom: 1px dotted #800000; width: 95%;">Post your Query</label><br>
 
