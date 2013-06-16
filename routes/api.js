@@ -9,7 +9,8 @@ exports.getall = function ( req, res ) {
     host     : '127.0.0.1',
     port     : '3306',
     user     : 'root',
-    password : ''
+    password : '',
+    database : 'tabledata'
   });
 
   connection.connect();
@@ -17,14 +18,13 @@ exports.getall = function ( req, res ) {
   res.writeHeader(200, {'Content-type': 'application/json'});
 
   var output = [];
-  connection.query(';', function(err, rows, fields) {
+  connection.query('SELECT * FROM vawhacktable;', function(err, rows, fields) {
     if (err) throw err;
 
     console.log("Query fired and successful.")
-    for (var i in rows) {
-        output.push(rows[i].Database);
-    }
-    var result = output.join(',');
+
+      
+    var result = JSON.stringify(rows);
 
     console.log("Response: " + result);
     
