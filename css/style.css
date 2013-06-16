@@ -346,5 +346,15 @@ p {
 	nav:hover ul {
 
 		display: block;
-
 	}
+
+    #bargraph {
+        max-height:200px;
+
+    }
+
+    ul#updates{
+        max-height:200px;
+        overflow:hidden;
+    }
+}

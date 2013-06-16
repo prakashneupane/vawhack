@@ -26,11 +26,36 @@ vawApp.controller('MainController',
           'email' : $scope.email,
           'story' : $scope.story
         };
-        
+
+
         $http({ method: "POST", url: '/api/setdata', data: postData
       }).then(function (response) {
         
         console.log(response.data);
+		finalService.start();
+        $scope.result = finalService.asyncData;
+      }, function(response) {
+        myService.error = 'Can\'t get data';
+        myService.data = 'Error: ' + response.data;
+        return myService.data;
+      });
+        
+          $http({ method: "GET", url: '/api/getreportnumber'
+      }).then(function (response) {
+        
+        $scope.number = response.data;
+
+      }, function(response) {
+        myService.error = 'Can\'t get data';
+        myService.data = 'Error: ' + response.data;
+        return myService.data;
+      });
+          
+            
+       $http({ method: "GET", url: '/api/getdistrictnumber'
+      }).then(function (response) {
+        
+        $scope.districtnum = response.data;
 
       }, function(response) {
         myService.error = 'Can\'t get data';
@@ -63,6 +88,4 @@ vawApp.controller('MainController',
         myService.data = 'Error: ' + response.data;
         return myService.data;
       });
-      
-
   });

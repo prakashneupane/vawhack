@@ -28,7 +28,6 @@
   
   $(document).ready(function(){
     function rotateList(){
-      console.log('updating List');
       var updates = $('#updates li');
       $(updates[0]).fadeOut(function(){
         var newLi = $(updates[0]).clone();
@@ -70,26 +69,12 @@
 <h2 class="postLeft">Listing Reporting</h2>
 
 <div class="bargraph">
-<ul id="updates">
-<li class="barwrapper">
-<h2 class="title">[2013/06/24] &nbsp;&nbsp;&nbsp; This is title</h2>
-<p class="desc">Categories of sexual violence against children. 10. 1.2 This ... In light of the UK government's new initiative on sexual violence in conflict and the opportunities ..... children never report incidents of sexual violence and.</p>
+<ul id="updates" style="height:300px;overflow:hidden">
+<li class="barwrapper" ng-repeat="list in result">
+    <h2 class="title">[{{list.Date}}]{{list.title}} - {{list.district}}	</h2>
+    <p class="desc">{{list.story}}</p>
 </li>
-<li class="barwrapper">
-<h2 class="title">[2013/06/24] &nbsp;&nbsp;&nbsp; This is title</h2>
-<p class="desc">Categories of sexual violence against children. 10. 1.2 This ... In light of the UK government's new initiative on sexual violence in conflict and the opportunities ..... children never report incidents of sexual violence and.</p>
-</li>
-<li class="barwrapper">
-<h2 class="title">[2013/06/24] &nbsp;&nbsp;&nbsp; This is title</h2>
-<p class="desc">Categories of sexual violence against children. 10. 1.2 This ... In light of the UK government's new initiative on sexual violence in conflict and the opportunities ..... children never report incidents of sexual violence and.</p>
-</li>
-<li class="barwrapper">
-<h2 class="title">[2013/06/24] &nbsp;&nbsp;&nbsp; This is title</h2>
-<p class="desc">Categories of sexual violence against children. 10. 1.2 This ... In light of the UK government's new initiative on sexual violence in conflict and the opportunities ..... children never report incidents of sexual violence and.</p>
-</li><li class="barwrapper">
-<h2 class="title">[2013/06/24] &nbsp;&nbsp;&nbsp; This is title</h2>
-<p class="desc">Categories of sexual violence against children. 10. 1.2 This ... In light of the UK government's new initiative on sexual violence in conflict and the opportunities ..... children never report incidents of sexual violence and.</p>
-</li></ul>
+</ul>
 </div></div>
 <aside id="formSection">
    
@@ -124,12 +109,6 @@
 
     <div id="reportingText">
 
-
-    {{title}}
-    {{story}}
-    {{name}}
-    {{phone}}
-    {{email}}
 <aside id="formSection1">
    
 <form ng-submit="submit()" >
