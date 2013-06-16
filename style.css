@@ -168,7 +168,7 @@ li {
 
 
 .displyreport{
-margin:40px 0 0 20px;
+margin:60px 0 0 20px;
 width:450px;
 height:250px;
 
@@ -200,6 +200,10 @@ font-family: "Roboto lt", Arial, Helvetica, sans-serif;
 line-height: 92px;
 margin-top: 30px;
 }
+
+.total-wrapper .side1{
+margin-left:48px;
+float:left;}
 
 .displyreport .total-wrapper .text-label {
 color: #333;

@@ -79,13 +79,21 @@
 <!----------------------------------------Form Section--------------------------->
 <aside id="formSection">
    
+   
 <div class="displyreport">
 <div class="top-border">
 </div>
 
 <div class="total-wrapper">
+<div class="side1">
 <div class="amount">20</div>
-<div class="text-labe">Reports in last 1 year</div>
+<div class="text-label">Reports in last 1 year</div>
+</div>
+
+<div class="side2">
+<div class="amount">5</div>
+<div class="text-label">Districts</div>
+</div>
 </div>
 
 </div>
