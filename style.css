@@ -166,6 +166,47 @@ li {
  	background: #444;
 }
 
+
+.displyreport{
+margin:40px 0 0 20px;
+width:450px;
+height:250px;
+
+}
+
+
+.displyreport .top-border {
+background: #BBB;
+box-shadow: 0 0 8px #666;
+height: 24px;
+z-index: 10;
+left: 0;
+width: 450px;
+}
+
+.displyreport .total-wrapper {
+background: #eee;
+border: 10px solid #fff;
+box-shadow: 0 0 8px #666;
+color: #AE371F;
+padding: 15px;
+width:400px;
+text-align: center;
+}
+
+.displyreport .total-wrapper .amount {
+font-size: 86px;
+font-family: "Roboto lt", Arial, Helvetica, sans-serif;
+line-height: 92px;
+margin-top: 30px;
+}
+
+.displyreport .total-wrapper .text-label {
+color: #333;
+display: block;
+font-size: 14px;
+}
+
 /* Basics */
 
 
@@ -378,3 +419,5 @@ p {
 		display: block;
 
 	}
+
+
