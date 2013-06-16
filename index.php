@@ -16,6 +16,10 @@
        
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 		
+		<script type="text/javascript" src="js/lib/angular/angular.min.js"></script>
+        <script type="text/javascript" src="js/app.js"></script>
+        <script type="text/javascript" src="js/controllers/MainController.js"></script>
+        
 
 		<script type="text/javascript" src="js/jquery.min.js"></script>
                 <script type="text/javascript" src="js/bargraph.js"></script>
