@@ -1,7 +1,7 @@
 'use strict';
 
 vawApp.controller('MainController',
-  function MainController($scope) {
+  function MainController($scope, finalService) {
       $scope.test = "hello";
 
   });
