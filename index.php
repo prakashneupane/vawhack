@@ -1,6 +1,6 @@
 <!doctype html>
 
-<html lang="en">
+<html lang="en" ng-app="vawApp">
 
 <head>
 
@@ -23,7 +23,7 @@
 
 </head>
 
-<body>
+<body ng-controller="MainController">
 
 	<header>
 
@@ -43,6 +43,8 @@
 		</nav>
 
 	</header>
+
+	{{test}}
 <!-------------------------------MapArea Section---------------------------->
 <section id="mapSection">
 <div id="reportingText"><div class="left-section">
