@@ -1,0 +1,5 @@
+Client ID: apisignup
+Username: vowteam10
+Password: 6B8GE4iD
+
+http://api.sparrowsms.com/platform/login/verify/9179180bb34b8233462a87dfc03e7c8a
